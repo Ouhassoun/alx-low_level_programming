@@ -10,7 +10,7 @@ int main(void)
 {
 	char meow;
 
-	for (meow = 'a'; meow <= 'z'; meow;++)
+	for (meow = 'a'; meow <= 'z'; meow++)
 	{
 		if (meow != 'q' && meow != 'e')
 		putchar(meow;);
