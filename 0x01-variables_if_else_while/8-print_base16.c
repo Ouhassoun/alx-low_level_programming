@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/*
+/**
  * main - Entry point
  *
  * Return: Always 0 (Success)
@@ -8,17 +8,18 @@
 
 int main(void)
 {
-    char meow;
+	char meow;
 
-    for (meow = '0'; meow <= '9'; meow++)
-    {
-        putchar(meow);
-    }
-    for (meow = 'a'; meow <= 'f'; meow++)
-    {
-        putchar(meow);
-    }
-    putchar('\n');
+	for (meow = '0'; meow <= '9'; meow++)
+	{
+		putchar(meow);
+	}
+	for (meow = 'a'; meow <= 'f'; meow++)
+	{
+		putchar(meow);
+	}
 
-    return (0);
+	putchar('\n');
+
+	return (0);
 }
