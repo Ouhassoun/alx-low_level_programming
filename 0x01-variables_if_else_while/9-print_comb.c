@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-/*
+/**
  * main - Entry point
  *
- * Return: Always 0.
+ * Return: returns 0 if succeeded
  */
 
 int main(void)
@@ -15,10 +15,12 @@ int main(void)
 		putchar((nb % 10) + '0');
 		if (nb == 9)
 			continue;
-		
+
 		putchar(',');
 		putchar(' ');
 	}
+
 	putchar('\n');
+
 	return (0);
 }
