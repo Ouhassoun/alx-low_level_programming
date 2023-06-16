@@ -13,7 +13,7 @@ int main(void)
 	for (meow = 'a'; meow <= 'z'; meow++)
 	{
 		if (meow != 'q' && meow != 'e')
-		putchar(meow;);
+		putchar(meow);
 	}
 	putchar('\n');
 
