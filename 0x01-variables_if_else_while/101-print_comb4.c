@@ -1,31 +1,27 @@
-/*
- * File: 101-print_comb4.c
- */
-
 #include <stdio.h>
 
 /**
  * main - Entry point
  *
- * Return: Always 0.
+ * Return: return 0 if succeeded
  */
 int main(void)
 {
-	int digit1, digit2, digit3;
+	int nb1, nb2, nb3;
 
-	for (digit1 = 0; digit1 < 8; digit1++)
+	for (nb1 = 0; nb1 < 8; nb1++)
 	{
-		for (digit2 = digit1 + 1; digit2 < 9; digit2++)
+		for (nb2 = nb1 + 1; nb2 < 9; nb2++)
 		{
-			for (digit3 = digit2 + 1; digit3 < 10; digit3++)
+			for (nb3 = nb2 + 1; nb3 < 10; nb3++)
 			{
-				putchar((digit1 % 10) + '0');
-				putchar((digit2 % 10) + '0');
-				putchar((digit3 % 10) + '0');
+				putchar((nb1 % 10) + '0');
+				putchar((nb2 % 10) + '0');
+				putchar((nb3 % 10) + '0');
 
-				if (digit1 == 7 && digit2 == 8 && digit3 == 9)
+				if (nb1 == 7 && nb2 == 8 && nb3 == 9)
 					continue;
-				
+
 				putchar(',');
 				putchar(' ');
 			}
