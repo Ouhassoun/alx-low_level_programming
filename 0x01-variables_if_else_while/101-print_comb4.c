@@ -9,6 +9,7 @@
 int main(void)
 {
 	int nb1, nb2, nb3;
+
 	for (nb1 = 0; nb1 < 8; nb1++)
 	{
 		for (nb2 = nb1 + 1; nb2 < 9; nb2++)
