@@ -5,7 +5,6 @@
  *
  * Return: returns 0 if succeeded
  */
-
 int main(void)
 {
 	int nb1, nb2, nb3;
