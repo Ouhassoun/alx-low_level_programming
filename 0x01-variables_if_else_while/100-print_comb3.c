@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/*
+/**
  * main - Entry point
  *
  * Return: returns 0 if succeeded
@@ -19,7 +19,7 @@ int main(void)
 
 			if (nb1 == 8 && nb2 == 9)
 				continue;
-			
+
 			putchar(',');
 			putchar(' ');
 		}
