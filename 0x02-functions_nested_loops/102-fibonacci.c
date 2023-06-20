@@ -13,7 +13,7 @@ int main(void)
 
 	for ( i = 3; i <= 50; i++)
 	{
-		unsigned long long fib = fib1 + fib2;
+		long int fib = fib1 + fib2;
 		printf(", %ld", fib);
 		fib1 = fib2;
 		fib2 = fib;
