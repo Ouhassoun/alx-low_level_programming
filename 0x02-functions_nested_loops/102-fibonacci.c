@@ -12,9 +12,10 @@ int main(void)
 	int i;
 
 	printf("1, 2");
-	for ( i = 3; i <= 50; i++)
+	for (i = 3; i <= 50; i++)
 	{
 		long int fib = fib1 + fib2;
+
 		printf(", %ld", fib);
 		fib1 = fib2;
 		fib2 = fib;
