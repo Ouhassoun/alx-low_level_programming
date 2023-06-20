@@ -11,6 +11,7 @@ int main(void)
 	long int fib2 = 2;
 	int i;
 
+	printf("1, 2");
 	for ( i = 3; i <= 50; i++)
 	{
 		long int fib = fib1 + fib2;
