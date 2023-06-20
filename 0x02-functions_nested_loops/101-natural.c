@@ -6,7 +6,8 @@
  * Return: Always 0 (Success)
  */
 
-int main() {
+int main(void)
+{
 
 	int sum = 0;
 	int i;
