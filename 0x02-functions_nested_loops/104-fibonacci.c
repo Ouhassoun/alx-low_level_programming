@@ -10,8 +10,8 @@ int main(void)
 	unsigned long int current, previous, next;
 	unsigned long int current1, current2, previous1, previous2;
 	unsigned int i;
-    	previous = 1;
-    	current = 2;
+	previous = 1;
+	current = 2;
 
 	printf("%lu", previous);
 
@@ -39,6 +39,5 @@ int main(void)
 	}
 
 	printf("\n");
-
 	return (0);
 }
