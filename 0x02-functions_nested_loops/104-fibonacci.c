@@ -9,14 +9,11 @@ int main(void)
 {
 	unsigned long int current, previous, next;
 	unsigned long int current1, current2, previous1, previous2;
-	unsigned long int next1, next2;
-
+	unsigned int i;
     	previous = 1;
     	current = 2;
 
 	printf("%lu", previous);
-
-	unsigned int i;
 
 	for (i = 1; i < 91; i++)
 	{
