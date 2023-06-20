@@ -11,7 +11,7 @@ int main(void)
 	long int fib2 = 2;
 	int i;
 
-	for (int i = 3; i <= 50; ++i)
+	for ( i = 3; i <= 50; i++)
 	{
 		unsigned long long fib = fib1 + fib2;
 		printf(", %ld", fib);
