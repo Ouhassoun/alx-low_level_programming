@@ -7,19 +7,17 @@
 
 int main(void)
 {
-	unsigned long long fib1 = 1;
-	unsigned long long fib2 = 2;
-
-	printf("%llu, %llu", fib1, fib2);
+	long int fib1 = 1;
+	long int fib2 = 2;
 	int i;
 
 	for (int i = 3; i <= 50; ++i)
 	{
 		unsigned long long fib = fib1 + fib2;
-		printf(", %llu", fib);
+		printf(", %ld", fib);
 		fib1 = fib2;
 		fib2 = fib;
 	}
-	
+
 	return (0);
 }
