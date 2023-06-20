@@ -9,13 +9,12 @@ int main(void)
 {
 	unsigned int nb1 = 1;
 	unsigned int nb2 = 2;
-
-	printf("%u, %u", nb1, nb2);
+	unsigned int nb;
 	int i;
 
 	for (i = 3; i <= 98; ++i)
 	{
-		unsigned int nb = nb1 + nb2;
+		nb = nb1 + nb2;
 
 		printf(", %u", nb);
 
