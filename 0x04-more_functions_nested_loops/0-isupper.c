@@ -2,8 +2,9 @@
 
 /**
  * _isupper - define if a character is uppercase
+ * Description: define upper or lower case character
  * @c: charater
- * Return: void
+ * Return: 1 if uppercase and 0 if not
  */
 
 int _isupper(int c)
