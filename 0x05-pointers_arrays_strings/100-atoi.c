@@ -13,7 +13,6 @@ int _atoi(char *s)
 	int numSigns = 0;
 	int numDigits = 0;
 	int hasNumber = 0;
-	int isNegative = 0;
 	int result = 0;
 	int digit = 0;
 
