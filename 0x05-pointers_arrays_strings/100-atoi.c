@@ -29,14 +29,14 @@ int _atoi(char *s)
 	{
 		int digit = s[i] - '0';
 
-		if (result > (INT_MAX / 10) || (result == (INT_MAX / 10) && digit > (INT_MAX % 10)))
+		if ((result > 0 && result > (result * 10 + digit) / 10) || (result < 0 && result < (result * 10 - digit) / 10))
 		{
-			return ((sign == -1) ? INT_MIN : INT_MAX);
+			return ((sign == -1) ? -2147483648 : 2147483647);
 		}
 
-		result = (result * 10) + digit;
+		result = (result * 10) + (sign * digit);
 		i++;
 	}
 
-	return (sign * result);
+	return (result);
 }
