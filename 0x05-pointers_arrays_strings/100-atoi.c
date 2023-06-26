@@ -27,9 +27,9 @@ int _atoi(char *s)
 	{
 		int digit = *s - '0';
 
-		result = ((result * 10) + (sign * digit));
+		result = ((result * 10) + digit);
 		s++;
 	}
 
-	return (result);
+	return (result * sign);
 }
