@@ -9,38 +9,40 @@
 
 int _atoi(char *s)
 {
-	int numDigits = 0;
+	int i = 0;
 	int numSigns = 0;
-	int result = 0;
+	int numDigits = 0;
 	int hasNumber = 0;
 	int isNegative = 0;
-	int i = 0;
+	int result = 0;
+	int digit = 0;
 
 	while (s[numDigits] != '\0')
 	{
-		if (s[numDigits] >= '0' && s[numDigits] <= '9')
-			hasNumber = 1;
-		else if (s[numDigits] == '-')
-		{
-			numSigns++;
-			isNegative = 1;
-		}
-		else if (s[numDigits] != '+')
-			break;
 		numDigits++;
 	}
-		if (!hasNumber || numSigns > 1)
-			return (0);
-	while (i < numDigits)
+	while (i < numDigits && hasNumber == 0)
 	{
-		if (s[i] >= '0' && s[i] <= '9')
-		{
-			result = (result * 10) + (s[i] - '0');
-			i++;
-		}
-		else
-			break;
-	}
+		if (s[i] == '-')
+			numSigns++;
 
-	return (isNegative ? -result : result);
+	if (s[i] >= '0' && s[i] <= '9')
+	{
+		digit = s[i] - '0';
+	if (numSigns % 2 != 0)
+	{
+		digit = -digit;
+	}
+	result = result * 10 + digit;
+	hasNumber = 1;
+	if (s[i + 1] < '0' || s[i + 1] > '9')
+		break;
+	hasNumber = 0;
+	}
+	i++;
+	}
+	if (hasNumber == 0)
+		return (0);
+
+	return (result);
 }
