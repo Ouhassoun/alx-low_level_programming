@@ -11,29 +11,25 @@ int _atoi(char *s)
 {
 	int sign = 1;
 	int result = 0;
+	int i = 0;
 
-	while (*s == ' ')
+	while (s[i] == ' ')
 	{
-		s++;
+		i++;
 	}
 
-	if (*s == '+' || *s == '-')
+	if (s[i] == '+' || s[i] == '-')
 	{
-		sign = (*s == '-') ? -1 : 1;
-		s++;
+		sign = (s[i] == '-') ? -1 : 1;
+		i++;
 	}
 
-	while (*s >= '0' && *s <= '9')
+	while (s[i] >= '0' && s[i] <= '9')
 	{
-		int digit = *s - '0';
+		int digit = s[i] - '0';
 
-	if ((result > 0 && result > (result * 10 + digit) / 10) || (result < 0 && result < (result * 10 - digit) / 10))
-	{
-		return ((sign == -1) ? -2147483648 : 2147483647);
-	}
-
-	result = (result * 10) + (sign * digit);
-	s++;
+		result = ((result * 10) + (sign * digit));
+		i++;
 	}
 
 	return (result);
