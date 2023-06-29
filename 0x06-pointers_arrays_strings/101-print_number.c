@@ -8,35 +8,27 @@
 
 void print_number(int n)
 {
-	int digit;
+	int count = 0, power = 1;
 
-	int power = 1;
-
-	int temp = n;
-
-	if (n == 0)
-	{
-		_putchar('0');
-		return;
-	}
 
 	if (n < 0)
 	{
 		_putchar('-');
 		n = -n;
 	}
-
-	while (temp > 9)
+	while (n != 0)
 	{
-		temp /= 10;
-		power *= 10;
+		n /= 10;
+		count++;
 	}
-
-	while (power > 0)
+	while (count > 1)
 	{
-		digit = n / power;
-		_putchar('0' + digit);
-		n %= power;
+		power *= 10;
+		count--;
+	}
+	while (power >= 1)
+	{
+		_putchar(n / power % 10 + '0');
 		power /= 10;
 	}
 }
