@@ -10,7 +10,9 @@ void print_number(int n)
 {
 	int digit;
 
-	int divisor = 1;
+	int power = 1;
+
+	int temp = n;
 
 	if (n == 0)
 	{
@@ -24,14 +26,17 @@ void print_number(int n)
 		n = -n;
 	}
 
-	while (n / divisor > 9)
-		divisor *= 10;
-
-	while (divisor != 0)
+	while (temp > 9)
 	{
-		digit = n / divisor;
+		temp /= 10;
+		power *= 10;
+	}
+
+	while (power > 0)
+	{
+		digit = n / power;
 		_putchar('0' + digit);
-		n %= divisor;
-		divisor /= 10;
+		n %= power;
+		power /= 10;
 	}
 }
