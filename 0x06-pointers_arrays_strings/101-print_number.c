@@ -9,12 +9,12 @@
 void print_number(int n)
 {
 	int count = 0, power = 1;
-
+	unsigned int n2 = n;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		n2 = -n;
 	}
 	while (n != 0)
 	{
@@ -28,7 +28,7 @@ void print_number(int n)
 	}
 	while (power >= 1)
 	{
-		_putchar(n / power % 10 + '0');
+		_putchar(n2 / power % 10 + '0');
 		power /= 10;
 	}
 }
