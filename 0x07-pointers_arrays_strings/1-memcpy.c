@@ -4,17 +4,19 @@
  *@dest: char
  *@src: char
  *@n: int
+ *
  *Return: char
  */
-
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	int j = 0;
+	int r = 0;
+	int i = n;
 
-	while (j < n)
+	while (r < i)
 	{
-		dest[j] = src[j];
-		j++;
+		dest[r] = src[r];
+		n--;
+		r++;
 	}
 	return (dest);
 }
