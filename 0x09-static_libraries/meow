@@ -1,8 +1,8 @@
 #!/bin/bash
-FILES=$(find . -type f -name "*.o" -o -name "*.o")
+FILES=$(find . -type f -name "*.c" -o -name "*.c")
 
 # Loop through each file
 for file in $FILES; do
   # Run Betty on the file
-  rm -r "$file"
+  betty "$file"
 done
